@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <title>Calculatrice</title>
+</head>
+
+<body>
+    <div id="background" class="background"><h1 id="h1" onmouseout="hoverinverse()" onmouseover="hover()">MY CALCULATRICE</h1></div>
+    
+    <div class="main">
+        
+        <form name="form"><input id="display" class="textview" name="textview" value="0"></form>
+        <table>
+            <tr>
+                <td><input class="button" type="button" value="C" onclick="clean()"></td>
+                <td><input id="clear" class="button" type="button" value="CE" onclick="ce()"></td>
+                <td><input class="button" type="button" value="<" onclick="back()"></td>
+                <td><input id="divide" class="button" type="button" value="/" onclick="insert('/')"></td>
+                <td><input id="multiply" class="button" type="button" value="x" onclick="insert('*')"></td>
+            </tr>
+            <tr>
+                <td><input id="seven" class="button" type="button" value="7" onclick="insert(7)"></td>
+                <td><input id="eight" class="button" type="button" value="8" onclick="insert(8)"></td>
+                <td><input id ="nine" class="button" type="button" value="9" onclick="insert(9)"></td>
+                <td><input id="subtract" class="button" type="button" value="-" onclick="insert('-')"></td>
+                <td><input type="button" width="60" class="button" value="sqrt " onClick="sqrt()"></td>
+            </tr>
+            <tr>
+                <td><input id="four" class="button" type="button" value="4" onclick="insert(4)"></td>
+                <td><input id="five" class="button" type="button" value="5" onclick="insert(5)"></td>
+                <td><input id="six" class="button" type="button" value="6" onclick="insert(6)"></td>
+                <td><input id="add" class="button" type="button" value="+" onclick="insert('+')"></td>
+                <td><input class="button" type="button" value="cos" onclick="cos()"></td>
+            </tr>
+            <tr>
+                <td><input id="one" class="button" type="button" value="1" onclick="insert(1)"></td>
+                <td><input id="two" class="button" type="button" value="2" onclick="insert(2)"></td>
+                <td><input id="three" class="button" type="button" value="3" onclick="insert(3)"></td>
+                <td><input class="button" type="button" value="X²" onclick="Root()"></td>
+                <td rowspan=5><input id="equals" style="height:110px" class="button" type="button" value="=" onclick="equal()"></td>
+            </tr>
+            <tr>
+                <td colspan=2><input id="zero" style="width:110px" class="button" type="button" value="0" onclick="insert(0)">
+                </td>
+                <td><input id="decimal" class="button" type="button" value="." onclick="insert('.')"></td>
+                <td><input class="button" type="button" value="Rnd" onclick="Random()"></td>
+
+            </tr>
+        </table>
+    </div>
+
+
+    <script src="./javascript/calc.js"></script>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+
+</html>
